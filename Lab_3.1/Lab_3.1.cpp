@@ -23,18 +23,20 @@ int main()
 	if (x<1)
 	{
 		B = 7 * x * x + x - 8;
+		cout << "x<1" << endl;
 	}
 	if (1 <= x && x <= 4)
 	{
 		B = cos((x + 4) / sqrt(11)) / sin((x + 4) / sqrt(11)) + 3;
-
+		cout << "1 <= x && x <= 4" << endl;
 	}
 	if (x>4)
 	{
 		B = sqrt(1 + abs(pow(cos(x), 3)));
+		cout << "x>4" << endl;
 	}
 
-	y = A + B;
+	y = A - B;
 	cout<<"1)y = " << y << endl;
 
 	// спосіб 2: розгалуження в повній формі
@@ -42,18 +44,21 @@ int main()
 	if (x<1)
 	{
 		B = 7 * x * x + x - 8;
+		cout << "x<1" << endl;
 	}
 	else 
 		if (x>4)
 		{
 			B = sqrt(1 + abs(pow(cos(x), 3)));
+			cout << "x>4" << endl;
 		}
 		else
 		{
 			B = cos((x + 4) / sqrt(11)) / sin((x + 4) / sqrt(11)) + 3;
+			cout << "1 <= x && x <= 4" << endl;
 		}
 	
-	y = A + B;
+	y = A - B;
 	cout << "2)y = " << y << endl;
 	
 	return 0;
